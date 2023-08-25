@@ -1,6 +1,6 @@
 
 import csv
-f = open('D:\coder\DATA_ANALYST\PYTHON\THUC_HANH\chatbox_csv' )
+f = open('D:\coder\DATA_ANALYST\PYTHON\THUC_HANH\chatbox_csv\chatbox.csv')
 reader = csv.reader(f)
 
 
@@ -26,21 +26,21 @@ for question, answer in reader:
 
 
 while True:
-    
+
     print("BOT : What information do you want to know  ?  ")
     question_from_user = input(f"{name} : ")
 
-    # data.keys() : take keys from dict 
+    # data.keys() : take keys from dict
     for question in data.keys():
 
-        if question in question_from_user:          
-            result = data[question]      
+        if question in question_from_user:
+            result = data[question]
             print("BOT :", result, "\n")
             isSuccess = True
 
-    if isSuccess == False: 
+        if isSuccess == False:
             print("BOT : Sorry , i don't understand your question ! \n")
-            
+            break
 
     #  exit program
     print("BOT : Do you want to ask other questions ? : (yes , no) ")
