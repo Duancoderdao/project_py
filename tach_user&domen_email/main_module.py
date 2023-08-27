@@ -16,6 +16,8 @@ def main():
         user, domain = email_process(i)
         row_new = user.strip() + "," + domain.strip() + "\n"
         w.write(row_new)
+    f.close()
+    w.close()
 
 
 if __name__ == "__main__":
