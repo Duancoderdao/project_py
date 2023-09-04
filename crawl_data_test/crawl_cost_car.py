@@ -8,7 +8,7 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
 
 r = requests.get(link_basic, headers=headers)
-f = open('D:\coder\DATA_ENGINEER\PYTHON\PYTHON\THUC_HANH\craw_data_article\cost_car.csv',
+f = open('D:\coder\DATA_ENGINEER\PYTHON\PYTHON\THUC_HANH\crawl_data_test\cost_car.csv',
          'w', encoding='utf-8')
 if r.status_code == 200:
     soup = BeautifulSoup(r.content, 'html.parser')
